@@ -1,5 +1,5 @@
 {
-  "name": "@codistan-isb/bizb-api-plugin-daewoo-courier",
+  "name": "@codistan-isb/bizb-api-plugin-daewoo",
   "description": "Boilerplate Daewoo Courier plugin for the Reaction API",
   "label": "daewoo",
   "version": "1.0.1",
