@@ -1,0 +1,44 @@
+type Location {
+  terminal_id: Int!
+  terminal_name: String!
+}
+
+type Consignment {
+  Success: Boolean!
+  Error: Boolean!
+  Response: String!
+  TrackNo: String
+  Barcode: String
+  CashCollection: String
+  OrderId: String
+}
+
+type ConsignmentTracking {
+  Success: Boolean!
+  Error: Boolean!
+  Response: String!
+  CurrentTrackStatus: [TrackStatus]
+  TrackingDetails: [TrackingDetail]
+}
+
+type TrackStatus {
+  # Define fields as per your API response
+}
+
+type TrackingDetail {
+  # Define fields as per your API response
+}
+
+type Mutation {
+  bookConsignment(input: ConsignmentInput!): Consignment!
+  cancelBooking(trackingNo: String!): BookingCancellationResponse!
+}
+
+input ConsignmentInput {
+  # Define fields required for booking a consignment
+}
+
+type Query {
+  getLocations: [Location!]!
+  trackConsignment(trackingNo: String!): ConsignmentTracking!
+}
