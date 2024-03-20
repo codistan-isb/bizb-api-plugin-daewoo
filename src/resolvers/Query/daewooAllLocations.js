@@ -1,6 +1,6 @@
 import ReactionError from "@reactioncommerce/reaction-error";
 
-export default async function getLocations(
+export default async function daewooAllLocations(
   parent,
  args,
   context,
@@ -13,11 +13,11 @@ export default async function getLocations(
       "Unauthorized access. Please Login First"
     );
   }
-  const getLocations =
-    await context.queries.getLocations(context, args);
-  console.log("apiGetAllCitiesSwiftResponse", getLocations);
-  if (getLocations) {
-    return getLocations;
+  const daewooAllLocations =
+    await context.queries.daewooAllLocations(context, args);
+  console.log("apiGetAllCitiesSwiftResponse", daewooAllLocations);
+  if (daewooAllLocations) {
+    return daewooAllLocations;
   } else {
     return null;
   }

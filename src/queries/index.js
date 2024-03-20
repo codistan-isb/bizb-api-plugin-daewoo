@@ -1,4 +1,4 @@
-import getLocations from "./getLocations.js";
+import daewooAllLocations from "./daewooAllLocations.js";
 export default {
-  getLocations,
+  daewooAllLocations,
 };

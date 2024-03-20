@@ -17,8 +17,8 @@ export default async function register(app) {
   console.log("registering plugin", pkg.label); 
   console.log("registering plugin", pkg.name);
   await app.registerPlugin({
-    label: pkg.label,
-    name: pkg.name,
+    label: "Daewoo",
+    name: "daewoo",
     version: pkg.version,
     graphQL: {
       resolvers,

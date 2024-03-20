@@ -39,6 +39,6 @@ input ConsignmentInput {
 }
 
 type Query {
-  getLocations: [Location!]!
+  daewooAllLocations: [Location!]!
   trackConsignment(trackingNo: String!): ConsignmentTracking!
 }
