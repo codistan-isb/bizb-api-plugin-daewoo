@@ -13,11 +13,11 @@ export default async function getLocations(
       "Unauthorized access. Please Login First"
     );
   }
-  const apiGetAllCitiesSwiftResponse =
-    await context.queries.apiGetAllCitiesSwift(context, args);
-  console.log("apiGetAllCitiesSwiftResponse", apiGetAllCitiesSwiftResponse);
-  if (apiGetAllCitiesSwiftResponse) {
-    return apiGetAllCitiesSwiftResponse;
+  const getLocations =
+    await context.queries.getLocations(context, args);
+  console.log("apiGetAllCitiesSwiftResponse", getLocations);
+  if (getLocations) {
+    return getLocations;
   } else {
     return null;
   }

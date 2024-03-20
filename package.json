@@ -1,19 +1,19 @@
 {
   "name": "@codistan-isb/bizb-api-plugin-daewoo",
-  "description": "Boilerplate Daewoo Courier plugin for the Reaction API",
+  "description": "Reaction API plugin for daewoo",
   "label": "daewoo",
-  "version": "1.0.1",
+  "version": "1.1.1-development",
   "main": "index.js",
   "type": "module",
   "engines": {
     "node": ">=14.18.1"
   },
-  "homepage": "https://github.com/reactioncommerce/api-plugin-example",
-  "url": "https://github.com/reactioncommerce/api-plugin-example",
+  "homepage": "https://github.com/codistan-isb/bizb-api-plugin-daewoo",
+  "url": "https://github.com/codistan-isb/bizb-api-plugin-daewoo",
   "email": "hello-open-commerce@mailchimp.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reactioncommerce/api-plugin-example.git"
+    "url": "git+https://github.com/codistan-isb/bizb-api-plugin-daewoo.git"
   },
   "author": {
     "name": "Mailchimp Open Commerce",
@@ -22,7 +22,7 @@
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/reactioncommerce/api-plugin-example/issues"
+    "url": "https://github.com/codistan-isb/bizb-api-plugin-daewoo/issues"
   },
   "sideEffects": false,
   "dependencies": {
