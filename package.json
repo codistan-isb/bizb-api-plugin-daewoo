@@ -2,7 +2,7 @@
   "name": "@codistan-isb/bizb-api-plugin-daewoo",
   "description": "Reaction API plugin for daewoo",
   "label": "daewoo",
-  "version": "1.1.2-development",
+  "version": "1.1.3-development",
   "main": "index.js",
   "type": "module",
   "engines": {
