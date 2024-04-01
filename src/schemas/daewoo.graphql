@@ -22,23 +22,107 @@ type ConsignmentTracking {
 }
 
 type TrackStatus {
-  # Define fields as per your API response
+  track_no: Int!
+  order_id: String!
+  booking_date_time: String!
+  customer: String!
+  payment_mode_name: String!
+  CODMode: String!
+  source_terminal: String!
+  source_ccp: String!
+  destination_terminal: String!
+  destination_ccpi: String!
+  status_name: String!
+  amount_cod: Float!
+  remarks: String!
+  web_track_code: Int!
+  tweight: Float!
+  tpieces: Int!
+  tqty: Int!
+  sender_name: String!
+  sender_contact1: String!
+  sender_address1: String!
+  sender_city: String!
+  sender_cnic: String!
+  sender_email: String!
+  receiver_name: String!
+  receiver_contact1: String!
+  receiver_address1: String!
+  receiver_city: String!
+  receiver_cnic: String!
+  receiver_email: String!
 }
 
 type TrackingDetail {
-  # Define fields as per your API response
+  booking_no: Int!
+  BarCode: Int!
+  Date: String!
+  PortalDate: String!
+  Status: String!
+  Status_Reason: String!
+  TransactionTerminal: String!
+  add_user: String!
+  remarks: String!
+  Collector_Name: String!
+  Collector_Contact: String!
+  Collector_Cnic: String!
+  Rem: String!
+  Collector_Relation: String!
+}
+
+
+
+input ConsignmentInput {
+  order_no: String!
+  source_terminal_id: Int!
+  destination_terminal_id: Int!
+  receiver_name: String!
+  receiver_cnic: String!
+  receiver_mobile: String!
+  receiver_address: String!
+  receiver_city: String!
+  receiver_email: String!
+  remarks: String
+  category_id: Int
+  qty: Int!
+  weight: Float!
+  barcode: String
+  cod_amount: Float!
+  source_location_point: Float!
+  destination_location_point: Float!
+  source_location_address: String!
+  destination_location_address: String!
+  item_description: String!
+}
+
+type CancelBookingResponse {
+  Success: Boolean!
+  Error: Boolean!
+  Response: String!
+}
+
+input CalculateRateInput {
+  destinationTerminalId: String!
+  qty: String!
+  weight: String!
+}
+
+# Define the output type for the calculateRate mutation response
+type CalculateRateResponse {
+  Success: Boolean!
+  Error: Boolean!
+  Validations: Boolean!
+  Response: String!
+  ServiceCharges: Int!
 }
 
 type Mutation {
   bookConsignment(input: ConsignmentInput!): Consignment!
-  cancelBooking(trackingNo: String!): BookingCancellationResponse!
-}
-
-input ConsignmentInput {
-  # Define fields required for booking a consignment
+  cancelBooking(trackingNo: String!): CancelBookingResponse!
+  calculateRate(input: CalculateRateInput!): CalculateRateResponse!
 }
 
 type Query {
-  daewooAllLocations: [Location!]!
+  daewooAllLocations: [Location]!
   trackConsignment(trackingNo: String!): ConsignmentTracking!
 }
